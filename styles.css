@@ -1,0 +1,13 @@
+.dissolve-out {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.stylish-text {
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 10px; /* For spacing between gif and text */
+    background-color: #f9f9f9;
+    transition: opacity 0.3s; /* Optional: smooth appearance */
+    display: none; /* Initially, it's hidden */
+}

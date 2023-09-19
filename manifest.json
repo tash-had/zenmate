@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Zenmate",
+    "version": "1.0",
+    "description": "Zenmate",
+    "permissions": ["activeTab", "videoCapture", "storage", "tabs", "webRequest", "webRequestBlocking", "declarativeContent", "<all_urls>"],
+    "host_permissions": ["*://*/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "css": ["styles.css"],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["assets/SIRI_FINAL.gif", "assets/audio.mp3"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
